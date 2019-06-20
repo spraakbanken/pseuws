@@ -1,0 +1,3 @@
+[submodule "LR_project"]
+	path = LR_project
+	url = git@github.com:SamirYousuf/LR_project.git
