@@ -1,10 +1,9 @@
 #! /usr/bin/env python
 
 import json
-from wsgiref.simple_server import make_server
 from urllib.parse import parse_qs
-from html import escape
 from LR_project.src import identification
+
 
 def app(env, start_response):
     # Query string parameters.
@@ -25,6 +24,7 @@ def app(env, start_response):
 
     status = '200 OK'
     response_headers = [
+        ('Access-Control-Allow-Origin', '*'),
         ('Content-Type', 'text/plain'),
         ('Content-Length', str(sum(len(s) for s in body))),
     ]

@@ -1,16 +1,9 @@
 pseuws
 ===
 
-A thin WSGI web service layer for SamirYousuf's rule-based pseudonymizer.
+A thin WSGI web service layer for SamirYousuf's rule-based pseudonymizer for Swedish text.
 
 The service lives at `https://ws.spraakbanken.gu.se/ws/larka/anon`
-
-Requirements
----
-
-```sh
-$ pip3 install nltk pandas python-Levenshtein
-```
 
 Usage
 ---
@@ -44,4 +37,13 @@ Example
 ```sh
 $ curl -d 'text=Ulla åker till London .' https://ws.spraakbanken.gu.se/ws/larka/anon
 [[{"string": "Masume", "label": ["fornamn_kvinnor", "1"]}, {"string": "\u00e5ker", "label": []}, {"string": "till", "label": []}, {"string": "Araguan\u00e3", "label": ["city_name", "1"]}, {"string": ".", "label": []}]]
+```
+
+Running the server
+---
+
+### Requirements
+
+```sh
+$ pip3 install nltk pandas python-Levenshtein
 ```
