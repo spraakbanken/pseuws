@@ -3,7 +3,7 @@ pseuws
 
 A thin WSGI web service layer for SamirYousuf's rule-based pseudonymizer for Swedish text.
 
-The service lives at `https://ws.spraakbanken.gu.se/ws/larka/anon`
+The service lives at `https://ws.spraakbanken.gu.se/ws/larka/pseuws`
 
 Usage
 ---
@@ -11,8 +11,8 @@ Usage
 Call the service with a POST request and the following data.
 
 | Parameter | Description |
-| --- | --- |
-| text | The text to pseudonymize. Punctuation tokens should be separated with a space, e.g. ``Jag heter Arild , och jag bor i Göteborg .``
+| --------- | ----------- |
+| text      | The text to pseudonymize. Punctuation tokens should be separated with a space, e.g. ``Jag heter Arild , och jag bor i Göteborg .``
 
 ### Response
 

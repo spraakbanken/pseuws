@@ -18,9 +18,11 @@ def app(env, start_response):
     cd = qd.copy()
     cd.update(pd)
 
-    out = json.dumps(identification.identify(pd['text']))
-
-    body = [out]
+    if 'text' in pd:
+        out = json.dumps(identification.identify(pd['text']))
+        body = [out]
+    else:
+        body = open('README.md').readlines()
 
     status = '200 OK'
     response_headers = [
