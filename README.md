@@ -35,8 +35,8 @@ Example
 ---
 
 ```sh
-$ curl -d 'text=Ulla åker till London .' https://ws.spraakbanken.gu.se/ws/larka/anon
-[[{"string": "Masume", "label": ["fornamn_kvinnor", "1"]}, {"string": "\u00e5ker", "label": []}, {"string": "till", "label": []}, {"string": "Araguan\u00e3", "label": ["city_name", "1"]}, {"string": ".", "label": []}]]
+$ curl -d 'text=Ulla åker till London .'  https://ws.spraakbanken.gu.se/ws/larka/pseuws
+[[{"label": ["firstname:female", "2"], "string": "Piritta"}, {"label": [], "string": "\u00e5ker"}, {"label": [], "string": "till"}, {"label": ["city", "1"], "string": "Zerba"}, {"label": [], "string": "."}]]
 ```
 
 Running the server

@@ -20,14 +20,14 @@ def app(env, start_response):
 
     if 'text' in pd:
         out = json.dumps(identification.identify(pd['text']))
-        body = [out]
+        body = [out, '']
     else:
-        body = open('README.md').readlines()
+        body = open('README.md', encoding="utf-8").readlines()
 
     status = '200 OK'
     response_headers = [
         ('Access-Control-Allow-Origin', '*'),
-        ('Content-Type', 'text/plain'),
+        ('Content-Type', 'text/plain; charset=utf-8'),
         ('Content-Length', str(sum(len(s) for s in body))),
     ]
     start_response(status, response_headers)
