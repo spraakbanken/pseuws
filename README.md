@@ -51,4 +51,7 @@ $ python3 -m venv venv
 $ source venv/bin/activate
 (venv) $ pip3 install --upgrade setuptools
 (venv) $ pip3 install nltk pandas python-Levenshtein gunicorn
+(venv) $ python3
+>>> import nltk
+>>> nltk.download('punkt')
 ```
