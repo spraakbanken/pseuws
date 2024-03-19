@@ -2,7 +2,7 @@
 
 import json
 from urllib.parse import parse_qs
-from LR_project.src import identification
+from LR_project.src import source
 
 
 def app(env, start_response):
@@ -19,7 +19,7 @@ def app(env, start_response):
     cd.update(pd)
 
     if 'text' in pd:
-        out = json.dumps(identification.identify(pd['text']))
+        out = json.dumps(source.identify(pd['text']))
         body = [out, '']
     else:
         body = open('README.md', encoding="utf-8").readlines()

@@ -55,3 +55,9 @@ $ source venv/bin/activate
 >>> import nltk
 >>> nltk.download('punkt')
 ```
+
+### Running
+
+```sh
+(venv) $ gunicorn anon:app
+```
